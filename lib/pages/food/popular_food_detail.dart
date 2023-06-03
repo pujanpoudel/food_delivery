@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/controllers/popular_product_controller.dart';
-import 'package:food_delivery/pages/home/main_food_page.dart';
 import 'package:food_delivery/utils/app_constants.dart';
 import 'package:food_delivery/utils/colors.dart';
 import 'package:food_delivery/utils/dimensions.dart';
@@ -11,11 +10,11 @@ import 'package:food_delivery/widgets/expandable_text_widget.dart';
 import 'package:get/get.dart';
 import '../../controllers/cart_controller.dart';
 import '../../routes/route_helper.dart';
-import '../cart/cart_page.dart';
 
 class PopularFoodDetail extends StatelessWidget {
   final int pageId;
-  const PopularFoodDetail({Key? key, required this.pageId}) : super(key: key);
+  final String page;
+  const PopularFoodDetail({Key? key, required this.pageId, required this.page}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +52,11 @@ class PopularFoodDetail extends StatelessWidget {
                 children: [
                   GestureDetector(
                     onTap:(){
-                      Get.to(()=>MainFoodPage());
+                      if(page=="cartpage"){
+                        Get.toNamed(RouteHelper.getCartPage());
+                      }else{
+                        Get.toNamed(RouteHelper.getInitial());
+                      }
                        },
                       child:
                   AppIcon(icon: Icons.arrow_back_ios)
@@ -114,15 +117,18 @@ class PopularFoodDetail extends StatelessWidget {
                   children: [
                     AppColumn(text:product.name!),
                     SizedBox(height: Dimensions.height20,),
-                    BigText(text: "Introduction"),
+                    BigText(text: "About this food"),
                     SizedBox(height: Dimensions.height20,),
-                    Expanded(child: SingleChildScrollView(child: ExpandableTextWidget(text: product.description!))),
+                    Expanded(child: SingleChildScrollView(
+                        child: ExpandableTextWidget(
+                            text: product.description!
+                        ))),
                   ],
                 )
               ))
         ],
       ),
-      bottomNavigationBar: GetBuilder<PopularProductController>(builder: (popularProduct){
+      bottomNavigationBar: GetBuilder<PopularProductController>(builder:(popularProduct){
         return Container(
 
           height: Dimensions.bottomHeightBar,
@@ -168,7 +174,7 @@ class PopularFoodDetail extends StatelessWidget {
                 child: Container(
                   padding: EdgeInsets.only(top: Dimensions.height20, bottom: Dimensions.height20, left: Dimensions.width20, right: Dimensions.width20),
 
-                      child: BigText(text: "\$ ${product.price!} | Add to cart", color: Colors.white),
+                      child: BigText(text: "Nrs ${product.price!} | Add to cart", color: Colors.white),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(Dimensions.radius20),
                       color: AppColors.mainColor
@@ -178,7 +184,7 @@ class PopularFoodDetail extends StatelessWidget {
             ],
           ),
         );
-      },),
+      }),
     );
   }
 }
