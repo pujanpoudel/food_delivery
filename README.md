@@ -52,7 +52,7 @@ npm start
 # Start the server
 cd ../server
 npm start
-Open your web browser and access the application at http://localhost:3000.
+Open your web browser and access the application at http://localhost:8000.
 
 Contributing
 Contributions to the food delivery app are welcome! If you find any bugs or have suggestions for improvements, please open an issue in the GitHub repository.
