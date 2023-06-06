@@ -14,12 +14,12 @@ Admin panel: An admin panel is available for managing food items, user accounts,
 Technologies Used
 The food delivery app is built using the following technologies:
 
-Front-end: HTML, CSS, JavaScript, React.js
-Back-end: Node.js, Express.js
-Database: MongoDB
-Payment integration: Stripe API
+Front-end: Flutter
+Back-end: laravel
+Database: mysql
+Payment integration: paypalI
 Authentication: JSON Web Tokens (JWT)
-Admin panel: React.js, Node.js, Express.js
+Admin panel: Laravel
 Installation
 To run the food delivery app locally, follow these steps:
 
