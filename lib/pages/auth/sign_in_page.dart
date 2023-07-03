@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery/base/custom_loader.dart';
 import 'package:food_delivery/pages/auth/sign_up_page.dart';
+import 'package:food_delivery/pages/home/home_page.dart';
 import 'package:food_delivery/widgets/app_text_field.dart';
 import 'package:food_delivery/widgets/big_text.dart';
 import 'package:get/get.dart';
@@ -25,8 +26,8 @@ class SignInPage extends StatelessWidget {
 
       if(email.isEmpty){
         showCustomSnackBar("Type in your email address", title: "Email address");
-      }else if(!GetUtils.isEmail(email)){
-        showCustomSnackBar("Type in a valid email address", title: "Valid email address");
+       } else if(!GetUtils.isEmail(email)){
+         showCustomSnackBar("Type in a valid email address", title: "Valid email address");
       }else if(password.isEmpty){
         showCustomSnackBar("Type in your password", title: "password");
       }else if (password.length<6){
@@ -35,8 +36,9 @@ class SignInPage extends StatelessWidget {
 
         authController.login(email, password).then((status){
           if(status.isSuccess){
+            //print("success");
             //Get.toNamed(RouteHelper.getInitial());
-            Get.toNamed(RouteHelper.getInitial());
+            Get.to(()=>HomePage());
           }else{
             showCustomSnackBar(status.message);
           }
