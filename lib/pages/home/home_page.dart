@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
   List<Widget> _buildScreens() {
     return [
       MainFoodPage(),
-      SignInPage(),
+      Container(child: Text("History page")),
       CartHistory(),
       AccountPage(),
     ];

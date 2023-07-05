@@ -36,9 +36,7 @@ class SignInPage extends StatelessWidget {
 
         authController.login(email, password).then((status){
           if(status.isSuccess){
-            //print("success");
-            //Get.toNamed(RouteHelper.getInitial());
-            Get.to(()=>HomePage());
+            Get.toNamed(RouteHelper.getInitial());
           }else{
             showCustomSnackBar(status.message);
           }
