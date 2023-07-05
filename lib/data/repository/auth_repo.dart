@@ -40,4 +40,12 @@ class AuthRepo{
       throw e;
     }
   }
+  bool clearSharedData(){
+    sharedPreferences.remove(AppConstants.TOKEN);
+    sharedPreferences.remove(AppConstants.PASSWORD);
+    sharedPreferences.remove(AppConstants.PHONE);
+    apiClient.token='';
+    apiClient.updateHeader('');
+    return true;
+  }
 }

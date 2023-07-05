@@ -8,6 +8,7 @@ import 'package:food_delivery/widgets/app_icon.dart';
 import 'package:food_delivery/widgets/big_text.dart';
 import 'package:food_delivery/widgets/expandable_text_widget.dart';
 import 'package:get/get.dart';
+import '../../controllers/auth_controller.dart';
 import '../../controllers/cart_controller.dart';
 import '../../routes/route_helper.dart';
 
@@ -169,7 +170,12 @@ class PopularFoodDetail extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: (){
-                  popularProduct.addItem(product);
+                  if(Get.find<AuthController>().userLoggedIn()){
+                    popularProduct.addItem(product);
+                  }else{
+                    Get.toNamed(RouteHelper.getSignInPage());
+                  }
+                  //popularProduct.addItem(product);
                 },
                 child: Container(
                   padding: EdgeInsets.only(top: Dimensions.height20, bottom: Dimensions.height20, left: Dimensions.width20, right: Dimensions.width20),

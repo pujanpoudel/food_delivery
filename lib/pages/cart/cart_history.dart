@@ -127,7 +127,7 @@ class CartHistory extends StatelessWidget {
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     children: [
                                       SmallText(text: "Total",color: AppColors.titleColor),
-                                      BigText(text: itemsPerOrder[i].toString()+"Items", color: AppColors.titleColor,),
+                                      BigText(text: itemsPerOrder[i].toString()+" Items", color: AppColors.titleColor,),
                                       GestureDetector(
                                         onTap:(){
                                           var orderTime = cartOrderTimeToList();

@@ -1,10 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:food_delivery/controllers/auth_controller.dart';
+import 'package:food_delivery/controllers/cart_controller.dart';
 import 'package:food_delivery/utils/colors.dart';
 import 'package:food_delivery/widgets/account_widget.dart';
 import 'package:food_delivery/widgets/app_icon.dart';
 import 'package:food_delivery/widgets/big_text.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
+import '../../routes/route_helper.dart';
 import '../../utils/dimensions.dart';
 
 class AccountPage extends StatelessWidget {
@@ -92,17 +97,29 @@ class AccountPage extends StatelessWidget {
                         iconSize: Dimensions.height10*5/2,
                         size: Dimensions.height10*5,
                       ),
-                      bigText: BigText(text: "Pujan"),
+                      bigText: BigText(text: "Messages"),
                     ),
                     SizedBox(height: Dimensions.height20),
-                    AccountWidget(
-                      appIcon: AppIcon(icon: Icons.message_outlined,
-                        backgroundColor: Colors.redAccent,
-                        iconColor: Colors.white,
-                        iconSize: Dimensions.height10*5/2,
-                        size: Dimensions.height10*5,
+                    GestureDetector(
+                      onTap: (){
+                        if(Get.find<AuthController>().userLoggedIn()){
+                        Get.find<AuthController>().clearSharedData();
+                        Get.find<CartController>().clear();
+                        Get.find<CartController>().clearCartHistory();
+                        Get.offNamed(RouteHelper.getSignInPage());
+                        }else{
+                          print("You Logged out");
+                        }
+                      },
+                      child: AccountWidget(
+                        appIcon: AppIcon(icon: Icons.logout,
+                          backgroundColor: Colors.redAccent,
+                          iconColor: Colors.white,
+                          iconSize: Dimensions.height10*5/2,
+                          size: Dimensions.height10*5,
+                        ),
+                        bigText: BigText(text: "Log Out"),
                       ),
-                      bigText: BigText(text: "Pujan"),
                     ),
                     SizedBox(height: Dimensions.height20),
                   ],
