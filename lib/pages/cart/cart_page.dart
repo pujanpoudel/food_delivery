@@ -3,7 +3,6 @@ import 'package:food_delivery/base/no_data_page.dart';
 import 'package:food_delivery/controllers/auth_controller.dart';
 import 'package:food_delivery/controllers/cart_controller.dart';
 import 'package:food_delivery/controllers/popular_product_controller.dart';
-import 'package:food_delivery/pages/home/main_food_page.dart';
 import 'package:food_delivery/utils/app_constants.dart';
 import 'package:food_delivery/widgets/big_text.dart';
 import 'package:food_delivery/widgets/small_text.dart';
@@ -29,10 +28,15 @@ class CartPage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              AppIcon(icon: Icons.arrow_back_ios,
-              iconColor: Colors.white,
-              backgroundColor: AppColors.mainColor,
-              iconSize: Dimensions.iconSize24,
+              GestureDetector(
+                onTap: (){
+                  Get.back();
+                },
+                child: AppIcon(icon: Icons.arrow_back_ios,
+                  iconColor: Colors.white,
+                  backgroundColor: AppColors.mainColor,
+                  iconSize: Dimensions.iconSize24,
+                ),
               ),
               SizedBox(width: Dimensions.width20*5,),
               GestureDetector(
