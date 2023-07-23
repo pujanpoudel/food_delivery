@@ -1,8 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dbestech.food_delivery">
+    package="com.pujan.food_delivery">
    <application
         android:label="food_delivery"
         android:icon="@mipmap/ic_launcher">
+       <meta-data android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyBjHyFgZqynxUbrXB3Tfgionz6sfk7phUQ"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
