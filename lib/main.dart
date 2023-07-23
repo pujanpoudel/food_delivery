@@ -10,6 +10,7 @@ import 'package:food_delivery/pages/home/food_page_body.dart';
 import 'package:food_delivery/pages/home/main_food_page.dart';
 import 'package:food_delivery/pages/splash/splash_page.dart';
 import 'package:food_delivery/routes/route_helper.dart';
+import 'package:food_delivery/utils/colors.dart';
 import 'package:get/get.dart';
 import 'controllers/recommended_product_controller.dart';
 import 'helper/dependencies.dart' as dep;
@@ -30,11 +31,15 @@ class MyApp extends StatelessWidget {
       return GetBuilder<RecommendedProductController>(builder: (_){
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
+          title: 'Online Restaurant',
           //home: SignInPage(),
           //home: SplashScreen(),
           initialRoute: RouteHelper.getSplashPage(),
           getPages: RouteHelper.routes,
+          theme: ThemeData(
+            primaryColor: AppColors.mainColor,
+            fontFamily: "Lato"
+          ),
         );
       });
     });

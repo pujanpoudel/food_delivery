@@ -25,18 +25,29 @@ class LocationController extends GetxController implements GetxService{
   List<AddressModel> _addressList=[];
   List<AddressModel> get addressList=> _addressList;
   late List<AddressModel> _allAddressList;
+  List<AddressModel> get allAddressList => _allAddressList;
   final List<String> _addressTypeList=["home", "office", "others"];
   List<String> get addressTypeList=>_addressTypeList;
   int _addressTypeIndex=0;
   int get addressTypeIndex => _addressTypeIndex;
 
   late GoogleMapController _mapController;
+  GoogleMapController get mapController=>_mapController;
   bool _updateAddressData=true;
   bool _changeAddress=true;
 
   bool get loading => _loading;
   Position get position => _position;
   Position get pickPosition =>_pickPosition;
+  //for service zone
+  bool _isLoading = false;
+  bool get isLoading=>_isLoading;
+  //is the service available there?
+  bool _inZone = false;
+  bool get inZone=>_inZone;
+  //show and hide button as maps loads
+  bool _buttonDisabled=true;
+  bool get buttonDisabled=>_buttonDisabled;
 
   void setMapController(GoogleMapController mapController){
     _mapController=mapController;
@@ -62,6 +73,9 @@ class LocationController extends GetxController implements GetxService{
               heading: 1, accuracy: 1, altitude: 1, speedAccuracy: 1, speed: 1
           );
         }
+          ResponseModel _responseModel=
+              await getZone(position.target.latitude.toString(), position.target.longitude.toString(), false);
+        _buttonDisabled=!_responseModel.isSuccess;
 
         if(_changeAddress){
           String _address = await getAddressfromGeocode(
@@ -76,6 +90,10 @@ class LocationController extends GetxController implements GetxService{
       }catch(e){
         print(e);
       }
+      _loading=false;
+      update();
+    }else{
+    _updateAddressData=true;
     }
   }
 
@@ -87,6 +105,7 @@ class LocationController extends GetxController implements GetxService{
     }else{
       print("Error getting google api");
     }
+    update();
     return _address;
   }
 
@@ -116,9 +135,10 @@ class LocationController extends GetxController implements GetxService{
       Response response = await locationRepo.addAddress(addressModel);
       ResponseModel responseModel;
       if(response.statusCode==200){
-        String message = response.body("message");
+        await getAddressList();
+        String message = response.body["message"];
         responseModel = ResponseModel(true, message);
-        //saveUserAddress()
+        await saveUserAddress(addressModel);
       }else{
         print("couldn't save the address");
         responseModel = ResponseModel(false, response.statusText!);
@@ -126,5 +146,70 @@ class LocationController extends GetxController implements GetxService{
       }
       update();
       return responseModel;
+  }
+
+
+  Future<void>getAddressList() async {
+      Response response = await locationRepo.getAllAddress();
+      if(response.statusCode==200){
+        _addressList=[];
+        _allAddressList=[];
+        response.body.forEach((address){
+          _addressList.add(AddressModel.fromJson(address));
+          _allAddressList.add(AddressModel.fromJson(address));
+        });
+      }else{
+        _addressList=[];
+        _allAddressList=[];
+      }
+      update();
+  }
+  Future<bool> saveUserAddress(AddressModel addressModel) async {
+    String userAddress = jsonEncode(addressModel.toJson());
+    return await locationRepo.saveUserAddress(userAddress);
+  }
+  void clearAddressList(){
+      _addressList=[];
+      _allAddressList=[];
+      update();
+  }
+  String getUserAddressFromLocalStorage(){
+      return locationRepo.getUserAddress();
+  }
+
+  setAddAddressData(){
+      _position=_pickPosition;
+      _placemark=_pickPlacemark;
+      _updateAddressData=false;
+      update();
+  }
+  Future<ResponseModel> getZone(String lat, String lng, bool markerLoad) async {
+      late ResponseModel _responseModel;
+
+      if(markerLoad){
+        _loading=true;
+      }else{
+        _isLoading=true;
+      }
+      update();
+      Response response = await locationRepo.getZone(lat, lng);
+      if(response.statusCode==200){
+        _inZone=true;
+        _responseModel = ResponseModel(true, response.body["zone_id"].toString());
+      }else{
+        _inZone=false;
+        _responseModel = ResponseModel(true, response.statusText!);
+      }
+      if(markerLoad){
+        _loading=false;
+      }else{
+        _isLoading=false;
+      }
+      /*
+      debug
+       */
+      //print(response.statusCode);//200good//404bad route//500server or app bad//403commission?
+      update();
+      return _responseModel;
   }
 }

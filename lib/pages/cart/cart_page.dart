@@ -208,7 +208,7 @@ class CartPage extends StatelessWidget {
                   Get.toNamed(RouteHelper.getAddressPage());
                 }
               }else{
-                Get.toNamed(RouteHelper.getSignInPage());
+                Get.toNamed(RouteHelper.getInitial());
               }
 
             },

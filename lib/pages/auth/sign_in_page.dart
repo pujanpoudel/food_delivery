@@ -17,24 +17,22 @@ class SignInPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var emailController = TextEditingController();
+    var phoneController = TextEditingController();
     var passwordController = TextEditingController();
     void _login(AuthController authController){
 
-      String email = emailController.text.trim();
+      String phone = phoneController.text.trim();
       String password = passwordController.text.trim();
 
-      if(email.isEmpty){
-        showCustomSnackBar("Type in your email address", title: "Email address");
-       } else if(!GetUtils.isEmail(email)){
-         showCustomSnackBar("Type in a valid email address", title: "Valid email address");
+      if(phone.isEmpty){
+        showCustomSnackBar("Type in your phone number", title: "Phone number");
       }else if(password.isEmpty){
         showCustomSnackBar("Type in your password", title: "password");
       }else if (password.length<6){
         showCustomSnackBar("Password must be 6 characters or more", title: "Password");
       }else{
 
-        authController.login(email, password).then((status){
+        authController.login(phone, password).then((status){
           if(status.isSuccess){
             Get.toNamed(RouteHelper.getInitial());
           }else{
@@ -55,7 +53,7 @@ class SignInPage extends StatelessWidget {
               //app logo
               Container(
                 height: Dimensions.screenHeight*0.25,
-                child: Center(
+                child: const Center(
                   child: CircleAvatar(
                     backgroundColor: Colors.white,
                     radius: 80,
@@ -90,10 +88,10 @@ class SignInPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: Dimensions.height20),
-              //email
-              AppTextField(textController: emailController,
-                  hintText: "Email",
-                  icon: Icons.email
+              //phone
+              AppTextField(textController: phoneController,
+                  hintText: "Phone",
+                  icon: Icons.phone
               ),
               SizedBox(height: Dimensions.height20),
               //password
@@ -146,7 +144,7 @@ class SignInPage extends StatelessWidget {
               //sign up options
               RichText(
                   text: TextSpan(
-                      text: "Don\'t have an account?",
+                      text: "Don't have an account?",
                       style: TextStyle(
                         color: Colors.grey[500],
                         fontSize: Dimensions.font20,
