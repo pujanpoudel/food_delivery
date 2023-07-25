@@ -8,7 +8,7 @@ import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-
+import 'package:google_maps_webservice/src/places.dart';
 import '../models/address_model.dart';
 
 
@@ -48,6 +48,8 @@ class LocationController extends GetxController implements GetxService{
   //show and hide button as maps loads
   bool _buttonDisabled=true;
   bool get buttonDisabled=>_buttonDisabled;
+  //saved google map suggestions for address
+  List<Prediction> _predictionList = [];
 
   void setMapController(GoogleMapController mapController){
     _mapController=mapController;
@@ -212,4 +214,18 @@ class LocationController extends GetxController implements GetxService{
       update();
       return _responseModel;
   }
+
+    searchLocation(BuildContext context, String text) async {
+      if(text.isNotEmpty){
+        Response response = await locationRepo.searchLocation(text);
+        if(response.statusText==200&&response.body['status']=='ok'){
+          _predictionList=[];
+          response.body['predictions'].forEach((prediction)
+          =>_predictionList.add(Prediction.fromJson(prediction)));
+        }else{
+
+        }
+      }
+    }
+
 }
