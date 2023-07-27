@@ -20,7 +20,7 @@ class LocationDialogue extends StatelessWidget {
           borderRadius: BorderRadius.circular(Dimensions.radius20/2),
 
         ),
-        child: SizedBox(
+        /*child: SizedBox(
           width: Dimensions.screenWidth,
           child: TypeAheadField(
             textFieldConfiguration: TextFieldConfiguration(
@@ -38,7 +38,7 @@ class LocationDialogue extends StatelessWidget {
 
 
           ),
-        ),
+        ),*/
       ),
     );
   }
