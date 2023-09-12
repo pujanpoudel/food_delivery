@@ -1,4 +1,5 @@
 Food Delivery App
+
 This is a Food Delivery App repository that allows users to order food from the comfort of your house. The app is designed to provide a convenient and efficient way for users to browse restaurant menus, place orders, and have their food delivered to their doorstep.
 
 Features
