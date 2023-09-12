@@ -12,16 +12,12 @@ Order History: View and track previous orders.
 
 screenshots:
 <p float="left">
-  <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/9a98b813-4262-4b27-ae2a-15ba60357463" width="100" />
-  <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/6e97da9c-82e7-4cd5-8e96-4d4c12296f4f" width="100" /> 
-</p>
-<p float="left">
-  <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/0c21a70c-ca8b-4fe2-8086-118cc763cfb9" width="100" />
-  <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/5e20d01d-2167-4249-8b98-8acd194094da" width="100" /> 
-</p>
-<p float="left">
-  <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/5756909d-40be-4710-991a-2a746bdb9fe7" width="100" />
-  <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/83e6c977-596c-45b2-a080-3d4f0f6b6c83" width="100" /> 
+  <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/9a98b813-4262-4b27-ae2a-15ba60357463" width="100" alt="Sign Up" />
+  <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/6e97da9c-82e7-4cd5-8e96-4d4c12296f4f" width="100" alt="Sign In"/> 
+  <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/0c21a70c-ca8b-4fe2-8086-118cc763cfb9" width="100" alt="Home Page"/>
+  <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/5e20d01d-2167-4249-8b98-8acd194094da" width="100" alt="Product Page"/> 
+  <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/5756909d-40be-4710-991a-2a746bdb9fe7" width="100" alt="Profile"/>
+  <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/83e6c977-596c-45b2-a080-3d4f0f6b6c83" width="100" alt="Choose Location"/> 
 </p>
 
 
