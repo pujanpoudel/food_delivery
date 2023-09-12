@@ -14,6 +14,7 @@ screenshots:
 <table>
   <tr>
     <td align="center">
+      Sign Up
   <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/9a98b813-4262-4b27-ae2a-15ba60357463" width="150" alt="Sign Up"/>
       <br />
       Sign Up
