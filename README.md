@@ -12,7 +12,7 @@ Order History: View and track previous orders.
 
 screenshots:
 <p float="left" margin="10px">
-  <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/9a98b813-4262-4b27-ae2a-15ba60357463" width="150" alt="Sign Up" />
+  <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/9a98b813-4262-4b27-ae2a-15ba60357463" width="150" alt="Sign Up" style="border:5px solid black"/>
   <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/6e97da9c-82e7-4cd5-8e96-4d4c12296f4f" width="150" alt="Sign In"/> 
   <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/0c21a70c-ca8b-4fe2-8086-118cc763cfb9" width="150" alt="Home Page"/>
   <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/5e20d01d-2167-4249-8b98-8acd194094da" width="150" alt="Product Page"/> 
