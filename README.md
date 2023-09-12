@@ -10,7 +10,16 @@ Real-Time Tracking: Track the status of your order in real-time, from preparatio
 Payment Integration: Securely pay for orders online using various payment methods.
 Order History: View and track previous orders.
 
-Usage
+screenshots:
+![Simulator Screenshot - i![Simulator Screenshot - iPhone 14 Plus - 2023-09-12 at 19 30 32](https://github.com/pujanpoudel/food_delivery/assets/82041139/9a98b813-4262-4b27-ae2a-15ba60357463)
+Phone 14 Plus - 2023-09-12 at 19 30 26](https://github.com/pujanpoudel/food_delivery/assets/82041139/6e97da9c-82e7-4cd5-8e96-4d4c12296f4f)
+![Simulator Screenshot - iPhone 14 Plus - 2023-09-12 at 19 29 12](https://github.com/pujanpoudel/food_delivery/assets/82041139/0c21a70c-ca8b-4fe2-8086-118cc763cfb9)
+![Simulator Screenshot - iPhone 14 Plus - 2023-09-12 at 19 29 19](https://github.com/pujanpoudel/food_delivery/assets/82041139/5e20d01d-2167-4249-8b98-8acd194094da)
+![Simulator Screenshot - iPhone 14 Plus - 2023-09-12 at 19 29 30](https://github.com/pujanpoudel/food_delivery/assets/82041139/5756909d-40be-4710-991a-2a746bdb9fe7)
+![Simulator Screenshot - iPhone 14 Plus - 2023-09-12 at 19 29 41](https://github.com/pujanpoudel/food_delivery/assets/82041139/83e6c977-596c-45b2-a080-3d4f0f6b6c83)
+![Simulator Screenshot - iPhone 14 Plus - 2023-09-12 at 19 29 54](https://github.com/pujanpoudel/food_delivery/assets/82041139/bdd757f7-d5b4-469f-9a54-88246fad8102)
+
+
 User Registration:
 
 Create an account by providing your details.
