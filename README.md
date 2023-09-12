@@ -20,6 +20,20 @@ screenshots:
   <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/83e6c977-596c-45b2-a080-3d4f0f6b6c83" width="150" alt="Choose Location"/> 
 </p>
 
+<table>
+  <tr>
+    <td align="center">
+  <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/9a98b813-4262-4b27-ae2a-15ba60357463" width="150" alt="Sign Up"/>
+      <br />
+      Sign up
+    </td>
+    <td align="center">
+  <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/6e97da9c-82e7-4cd5-8e96-4d4c12296f4f" width="150" alt="Sign In"/> 
+      <br />
+      Sign up
+    </td>
+  </tr>
+</table>
 
 User Registration:
 
