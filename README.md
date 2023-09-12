@@ -14,33 +14,33 @@ screenshots:
 <table>
   <tr>
     <td align="center">
-      Sign Up
   <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/9a98b813-4262-4b27-ae2a-15ba60357463" width="150" alt="Sign Up"/>
       <br />
+      Sign Up
     </td>
     <td align="center">
-      Sign In
   <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/6e97da9c-82e7-4cd5-8e96-4d4c12296f4f" width="150" alt="Sign In"/> 
       <br />
+      Sign In
     </td>
     <td align="center">
-      Home Page
   <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/0c21a70c-ca8b-4fe2-8086-118cc763cfb9" width="150" alt="Home Page"/>
       <br />
+      Home Page
     </td>
     <td align="center">
-      Product Page
   <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/5e20d01d-2167-4249-8b98-8acd194094da" width="150" alt="Product Page"/> 
       <br />
+      Product Page
     </td><td align="center">
-      Profile
   <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/5756909d-40be-4710-991a-2a746bdb9fe7" width="150" alt="Profile"/>
       <br />
+      Profile
     </td>
     <td align="center">
-      Choose Location
   <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/83e6c977-596c-45b2-a080-3d4f0f6b6c83" width="150" alt="Choose Location"/> 
       <br />
+      Choose Location
     </td>
   </tr>
 </table>
