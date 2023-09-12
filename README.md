@@ -11,9 +11,14 @@ Payment Integration: Securely pay for orders online using various payment method
 Order History: View and track previous orders.
 
 screenshots:
-![Simulator Screenshot - i![Simulator Screenshot - iPhone 14 Plus - 2023-09-12 at 19 30 32](https://github.com/pujanpoudel/food_delivery/assets/82041139/9a98b813-4262-4b27-ae2a-15ba60357463)
-Phone 14 Plus - 2023-09-12 at 19 30 26](https://github.com/pujanpoudel/food_delivery/assets/82041139/6e97da9c-82e7-4cd5-8e96-4d4c12296f4f)
-![Simulator Screenshot - iPhone 14 Plus - 2023-09-12 at 19 29 12](https://github.com/pujanpoudel/food_delivery/assets/82041139/0c21a70c-ca8b-4fe2-8086-118cc763cfb9)
+<p float="left">
+  <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/9a98b813-4262-4b27-ae2a-15ba60357463" width="100" />
+  <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/6e97da9c-82e7-4cd5-8e96-4d4c12296f4f" width="100" /> 
+  <img src="https://github.com/pujanpoudel/food_delivery/assets/82041139/0c21a70c-ca8b-4fe2-8086-118cc763cfb9" width="100" />
+</p>
+![Simulator Screenshot - i![Simulator Screenshot - iPhone 14 Plus - 2023-09-12 at 19 30 32]()
+Phone 14 Plus - 2023-09-12 at 19 30 26]()
+![Simulator Screenshot - iPhone 14 Plus - 2023-09-12 at 19 29 12]()
 ![Simulator Screenshot - iPhone 14 Plus - 2023-09-12 at 19 29 19](https://github.com/pujanpoudel/food_delivery/assets/82041139/5e20d01d-2167-4249-8b98-8acd194094da)
 ![Simulator Screenshot - iPhone 14 Plus - 2023-09-12 at 19 29 30](https://github.com/pujanpoudel/food_delivery/assets/82041139/5756909d-40be-4710-991a-2a746bdb9fe7)
 ![Simulator Screenshot - iPhone 14 Plus - 2023-09-12 at 19 29 41](https://github.com/pujanpoudel/food_delivery/assets/82041139/83e6c977-596c-45b2-a080-3d4f0f6b6c83)
